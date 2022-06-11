@@ -1,19 +1,14 @@
 {
-  "name": "kubitdbonline",
-  "version": "1.0.4",
-  "description": "Online Database Üstelik Hem Türkçe Hem İngilizce KubitDBonline",
-  "main": "index.js",
+  "name": "kubitdb",
+  "version": "1.4.8",
+  "description": "Hem Türkçe Hem İngilizce Database! KubitDB",
   "dependencies": {
-    "axios": "^0.27.2"
+    "fs": "^0.0.2"
   },
   "keywords": [
     "db",
     "kubit.db",
     "kubit-db",
-    "kubit.dbonline",
-    "kubit-dbonline",
-    "kubitdbonline",
-    "kubitdb",
     "database",
     "DataBase",
     "kubitdb",
@@ -36,10 +31,10 @@
     "kubitdb online",
     "public database"
   ],
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "./index.ts",
   "author": "@kubilaytr",
   "license": "MIT"
 }
