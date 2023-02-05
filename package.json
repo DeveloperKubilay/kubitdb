@@ -1,7 +1,7 @@
 {
   "name": "kubitdb",
-  "version": "1.4.8",
-  "description": "Hem Türkçe Hem İngilizce Database! KubitDB",
+  "version": "1.5.0",
+  "description": "English and Turkish database! KubitDB",
   "dependencies": {
     "fs": "^0.0.2"
   },
@@ -10,31 +10,25 @@
     "kubit.db",
     "kubit-db",
     "database",
-    "DataBase",
     "kubitdb",
     "kubit",
     "jsondata",
     "json",
+    "jsondb",
     "databases",
     "fs",
-    "jsonfolder",
-    "türkçe",
     "türkçe database",
     "tr database",
     "tr db",
     "en db",
-    "online data",
-    "online database",
-    "mongodb",
-    "mongoose",
-    "mongo db",
-    "kubitdb online",
-    "public database"
+    "NoSql",
+    "NoSQL database"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeveloperKubilay/kubitdb"
   },
-  "types": "./index.ts",
+  "main":"index.js",
   "author": "@kubilaytr",
   "license": "MIT"
 }

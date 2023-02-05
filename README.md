@@ -1,27 +1,30 @@
 # KubitDB
-Yeni versiyon **kubitdb@1.4.8**
-Modülün sahibi **kubi#5443**
-## Bilgiler 
-**Yardım:** [Yardım sunucusu](https://discord.gg/4Xpwwz6pgN) 
-### Kullanımı
+Version,Sürüm **kubitdb@1.5.0**
+Owner,Sahibi **kubi#5443**
+## Info,Bilgi
+**Help:** [Discord](https://discord.gg/4Xpwwz6pgN) 
+### Use of,Kullanımı
 ```js
-const {kubitdb} = require('kubitdb')
-const db = new kubitdb("kubitdb")//kaydeceği dosyanın ismi değiştirebilirsiniz
+const kubitdb = require('kubitdb')
+const db = new kubitdb("kubitdb")
+//You can change the name of the file to save
+//You can use const db = new kubitdb("./kubitdb.json") if you want
+//kaydeceği dosyanın ismi değiştirebilirsiniz
 //İsterseniz const db = new kubitdb("./kubitdb.json") olarak kullanabilirsiniz
 
-db.ayarla('deneme','açık')
-db.set('deneme','true')
+db.ayarla('test','evet')
+db.set('test','true')
 /*/
 {
-  "deneme": "açık"
+  "test": "evet"
 }
 /*/
 
-db.ekle("para", 31)
-db.add("para", 31)
+db.ekle("test", 50)
+db.add("test", 50)
 /*/
 {
-  "para": 31
+  "test": 50
 }
 /*/
 db.it("serverSettings", { whitelist: "on", playerCount: "12" })
@@ -55,11 +58,13 @@ db.substr("para", 400)
 /*/
 db.sil("serverStatus")
 db.delete("serverStatus")
+db.del("serverStatus")
 /*/
 {}
 /*/
 db.sil("serverStatus",1)
 db.delete("serverStatus",100)
+db.del("serverStatus",100)
 /*/
 {
   "serverStatus": 9
@@ -72,8 +77,8 @@ db.fetchAll()
 db.getAll()
 /*/
 {
-  money: 500,
-  deneme: "abc"
+  "money": 500,
+  "deneme": "abc"
 }
 /*/
 db.temizle()
@@ -84,18 +89,19 @@ db.clearAll()
 {}
 /*/
 
+//calculate and does not save math data is like db.al,db.fetch
 //hesapla ve math data'ya kaydetmez db.al,db.fetch gibidir
-db.math("elma","+",10)
-db.hesapla("elma","+",10)
+db.math("apple","+",10)
+db.hesapla("apple","+",10)
 /*/
 10
 /*/
 ```
-### Online Database için
-##### KubitDBonline
-- ```npm i kubitdbonline```
-##### [KubitDB online kullanımı](https://www.npmjs.com/package/kubitdbonline) 
-
-##### Hatamı alıyorsun [Yardım sunucumuza gel](https://discord.gg/4Xpwwz6pgN) 
-##### KubitDB'yi Yüklemek için
+##### Support,Destek [Discord](https://discord.gg/4Xpwwz6pgN) 
+##### To download KubitDB, KubitDB indirmek için
 - ```npm i kubitdb```
+
+### For Online Database,Çevrimiçi Veritabanı için
+##### To download KubitDBonline, KubitDBonline indirmek için
+- ```npm i kubitdbonline```
+##### [KubitDB online](https://www.npmjs.com/package/kubitdbonline) 

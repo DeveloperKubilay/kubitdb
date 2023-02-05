@@ -1,21 +1,28 @@
-//Modül sürümü: 1.4.8
+//Module version: 1.5.0,Modül sürümü: 1.5.0
 
-//Modül MİT lisanslıdır
-//fs modülünün yardımı ile çalışmaktadır ve sahibi: Discord kubi#5443
-//Halamı hata alıyorsun ozmn discord sunucumuza gel, ticket aç ve sorunu bize bildir 
-//Discord sunucumuz https://discord.gg/4Xpwwz6pgN
-//İyi günler İyi kodlamalar :)
+//The module is licensed by MIT,Modül MİT lisanslıdır
+//Uses fs Discord kubi#5443,fs kullanmaktadır Discord kubi#5443
+//Github: https://github.com/DeveloperKubilay/kubitdb
+//Discord: https://discord.gg/4Xpwwz6pgN
+//Good day, good coding :),İyi günler İyi kodlamalar :)
 
 const fs = require('fs');
-const load = (file) => JSON.parse(fs.readFileSync(file, 'utf-8'));
-const write = (file, data) => fs.writeFileSync(file, JSON.stringify(data, undefined, 4));
-const extension = (filePath) => { let parts = filePath.split('.'); return parts[parts.length - 1]; }
+function load(file){ try{return JSON.parse(fs.readFileSync(file, 'utf-8'))}catch (e){
+if(String(e).split("Error: ENOENT: no such file or directory").length > 1){this.mkdirfile = ""
+file.split("/").map((x,c)=>{
+if(c === file.split("/").length-1) return;
+this.mkdirfile += x+"/"
+fs.mkdirSync(this.mkdirfile,{ recursive: true })
+});write(file, {});
+return JSON.parse(fs.readFileSync(file, 'utf-8'))
+}else {return {}}}};
+function write(file, data){ try{fs.writeFileSync(file, JSON.stringify(data, undefined, 2))}catch{}};
 class kubitdb {constructor(file) {
 this.file = file || 'kubitdb.json'
 if (this.file === 'kubitdb.json') { try { load(this.file); } catch { write(this.file, {}); } } else {
-if(extension(this.file) !== 'json') this.file = this.file + '.json'
+if(this.file.split('.')[this.file.split('.').length - 1] !== 'json') this.file = this.file + '.json'
 if (!this.file.includes('./')) {this.file = './' + this.file}
-try { load(this.file); } catch { write(this.file, {});}}}
+try { load(this.file); } catch {write(this.file, {});}}}
 
 set(data, value) {
 if (!data) return;
@@ -127,6 +134,17 @@ let fileData = load(this.file)
 if (isNaN(fileData[array]-index)) return;
 fileData[array] = fileData[array] - index;
 write(this.file, fileData);} return;}
+del(array, index) {
+let fileData = load(this.file)
+if(!fileData[array]) return;
+if (!array) return;
+if (index === undefined) {
+fileData[array] = undefined;
+write(this.file, fileData);} else {
+let fileData = load(this.file)
+if (isNaN(fileData[array]-index)) return;
+fileData[array] = fileData[array] - index;
+write(this.file, fileData);} return;}
 
 sil(array, index) {
 let fileData = load(this.file)
@@ -212,4 +230,4 @@ return ii} else if (operator === "*") {let iii = fileData[data] * value;
 return iii} else if (operator === "/") {let iiii = fileData[data] / value;
 return iiii} else { return; }}
 
-}module.exports = { kubitdb };
+}module.exports = kubitdb;
