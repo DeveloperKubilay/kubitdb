@@ -4,6 +4,7 @@
 //Good day, good coding :),İyi günler İyi kodlamalar :)
 
 const fs = require('fs');
+
 function load(file){ try{return JSON.parse(fs.readFileSync(file, 'utf-8'))}catch (e){
 if(String(e).split("Error: ENOENT: no such file or directory").length > 1){this.mkdirfile = ""
 file.split("/").map((x,c)=>{
@@ -14,6 +15,7 @@ fs.mkdirSync(this.mkdirfile,{ recursive: true })
 return JSON.parse(fs.readFileSync(file, 'utf-8'))
 }else {return {}}}};
 function write(file, data){ try{fs.writeFileSync(file, JSON.stringify(data, undefined, 2))}catch{}};
+
 class kubitdb {constructor(file) {
 this.file = file || 'kubitdb.json'
 if (this.file === 'kubitdb.json') { try { load(this.file); } catch { write(this.file, {}); } } else {
@@ -181,25 +183,21 @@ hepsinial() { return load(this.file); }
 fetch(data) {
 if (!data) return;
 let fileData = load(this.file)
-if (!fileData[data]) fileData[data] = undefined
 return fileData[data]}
 
 get(data) {
 if (!data) return;
 let fileData = load(this.file)
-if (!fileData[data]) fileData[data] = undefined
 return fileData[data]}
 
 bak(data) {
 if (!data) return;
 let fileData = load(this.file)
-if (!fileData[data]) fileData[data] = undefined
 return fileData[data]}
 
 al(data) {
 if (!data) return;
 let fileData = load(this.file)
-if (!fileData[data]) fileData[data] = undefined
 return fileData[data]}
 
 hesapla(data, operator, value) {
