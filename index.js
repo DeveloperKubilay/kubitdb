@@ -1,7 +1,4 @@
-//Module version: 1.5.0,Modül sürümü: 1.5.0
-
 //The module is licensed by MIT,Modül MİT lisanslıdır
-//Uses fs Discord kubi#5443,fs kullanmaktadır Discord kubi#5443
 //Github: https://github.com/DeveloperKubilay/kubitdb
 //Discord: https://discord.gg/4Xpwwz6pgN
 //Good day, good coding :),İyi günler İyi kodlamalar :)
@@ -26,7 +23,7 @@ try { load(this.file); } catch {write(this.file, {});}}}
 
 set(data, value) {
 if (!data) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 let fileData = load(this.file)
 fileData[data] = value;
 write(this.file, fileData);
@@ -34,7 +31,7 @@ return;}
 
 ayarla(data, value) {
 if (!data) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 let fileData = load(this.file)
 fileData[data] = value;
 write(this.file, fileData);
@@ -42,7 +39,7 @@ return;}
 
 add(data, value) {
 if (!data) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 if (typeof value == "number") {let fileData = load(this.file)
 if (fileData[data] === undefined) return this.set(data, value);
 if (typeof fileData[data]!== "number") return;
@@ -59,7 +56,7 @@ return;}}
 
 ekle(data, value) {
 if (!data) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 if (typeof value == "number") {let fileData = load(this.file)
 if (fileData[data] === undefined) return this.set(data, value);
 if (typeof fileData[data]!== "number") return;
@@ -76,7 +73,7 @@ return;}}
 
 subtract(data, value) {
 if (!data) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 let fileData = load(this.file)
 if (fileData[data] === undefined) return;
 if (isNaN(fileData[data]-value)) return;
@@ -86,7 +83,7 @@ return;}
 
 substr(data, value) {
 if (!data) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 let fileData = load(this.file)
 if (fileData[data] === undefined) return;
 if (isNaN(fileData[data]-value)) return;
@@ -96,7 +93,7 @@ return;}
 
 cıkar(data, value) {
 if (!data) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 let fileData = load(this.file)
 if (fileData[data] === undefined) return;
 if (isNaN(fileData[data]-value)) return;
@@ -106,7 +103,7 @@ return;}
 
 push(array, value) {
 if (!array) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 let fileData = load(this.file)
 if (fileData[array] && Array.isArray(fileData[array])) {
 fileData[array].push(value)
@@ -115,7 +112,7 @@ return;}
 
 it(array, value) {
 if (!array) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 let fileData = load(this.file)
 if (fileData[array] && Array.isArray(fileData[array])) {
 fileData[array].push(value)
@@ -208,7 +205,7 @@ return fileData[data]}
 hesapla(data, operator, value) {
 if (!data) return;
 if (!operator) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 if (typeof value !== "number") return;
 let fileData = load(this.file)
 if (typeof fileData[data] !== "number") return;
@@ -220,7 +217,7 @@ return iiii} else { return; }}
 
 math(data, operator, value) {if (!data) return;
 if (!operator) return;
-if (!value) return;
+if (value == undefined || value == "") return;
 if (typeof value !== "number") return;
 let fileData = load(this.file)
 if (typeof fileData[data] !== "number") return;

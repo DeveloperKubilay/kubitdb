@@ -1,6 +1,4 @@
 # KubitDB
-Version,Sürüm **kubitdb@1.5.0**
-Owner,Sahibi **kubi#5443**
 ## Info,Bilgi
 **Help:** [Discord](https://discord.gg/4Xpwwz6pgN) 
 ### Use of,Kullanımı
