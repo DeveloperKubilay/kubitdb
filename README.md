@@ -1,6 +1,6 @@
 # KubitDB
-## Info,Bilgi
-**Help:** [Discord](https://discord.gg/4Xpwwz6pgN) 
+## Json based database, Json tabanlı veritabanı
+**Help:** [Github](https://github.com/DeveloperKubilay/kubitdb/) 
 ### Use of,Kullanımı
 ```js
 const kubitdb = require('kubitdb')
@@ -95,11 +95,10 @@ db.hesapla("apple","+",10)
 10
 /*/
 ```
-##### Support,Destek [Discord](https://discord.gg/4Xpwwz6pgN) 
 ##### To download KubitDB, KubitDB indirmek için
 - ```npm i kubitdb```
 
-### For Online Database,Çevrimiçi Veritabanı için
-##### To download KubitDBonline, KubitDBonline indirmek için
+### For Online Database,To download KubitDBonline
+##### Çevrimiçi Veritabanı için, KubitDBonline indirmek için
 - ```npm i kubitdbonline```
 ##### [KubitDB online](https://www.npmjs.com/package/kubitdbonline) 
