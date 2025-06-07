@@ -2,9 +2,6 @@
   "name": "kubitdb",
   "version": "1.5.4",
   "description": "English and Turkish database! KubitDB",
-  "dependencies": {
-    "fs": "^0.0.2"
-  },
   "keywords": [
     "db",
     "kubit.db",
