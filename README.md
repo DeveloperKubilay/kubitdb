@@ -98,7 +98,7 @@ db.hesapla("apple","+",10)
 ##### To download KubitDB, KubitDB indirmek için
 - ```npm i kubitdb```
 
-##### 🐍 [Download the Python Version](https://github.com/DeveloperKubilay/pythonkubitdb)
+##### 🐍 [Use the Python Version](https://github.com/DeveloperKubilay/pythonkubitdb)
 
 ### For Online Database,To download KubitDBonline
 ##### Çevrimiçi Veritabanı için, KubitDBonline indirmek için
