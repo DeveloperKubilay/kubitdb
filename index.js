@@ -151,4 +151,6 @@ class kubitdb {
 
     hesapla(data, operator, value) { return this.math(data, operator, value); }
 
-} module.exports = kubitdb;
+} 
+
+module.exports = kubitdb;
