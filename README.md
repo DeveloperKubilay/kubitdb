@@ -95,10 +95,10 @@ db.hesapla("apple","+",10)
 10
 /*/
 ```
-##### To download KubitDB, KubitDB indirmek için
+#### To download KubitDB, KubitDB indirmek için
 - ```npm i kubitdb```
 
-##### 🐍 [Use the Python Version](https://github.com/DeveloperKubilay/pythonkubitdb)
+#### 🐍 [Use the Python Version](https://github.com/DeveloperKubilay/pythonkubitdb)
 
 ### For Online Database,To download KubitDBonline
 ##### Çevrimiçi Veritabanı için, KubitDBonline indirmek için
